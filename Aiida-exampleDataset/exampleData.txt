@@ -1,0 +1,129 @@
+the following is the seed data 
+
+{
+"instruction": "Develop an AiiDA Python script using QueryBuilder to retrieve all CalcJobNode entries whose process state is 'Finished'. The script should print each node's UUID and exit status, encapsulated within a function named fetch_finished_calculations(), and be executable as a standalone script.",
+"input": "AiiDA script to fetch finished CalcJobNode nodes with their UUIDs and exit statuses.",
+"output": "from aiida.orm import QueryBuilder, CalcJobNode\n\ndef fetch_finished_calculations():\n qb = QueryBuilder()\n qb.append(CalcJobNode, project=["uuid", "exit_status"], filters={"attributes.process_state": "Finished"})\n \n for uuid, exit_status in qb.all():\n print(f"Calculation {uuid} finished with exit status {exit_status}")\n\n\nif name == "main":\n fetch_finished_calculations()"
+}
+
+
+
+the following are the example data pairs created using generative LLM bootstrapping
+
+[
+{
+"instruction": "Write an AiiDA Python script using QueryBuilder to fetch all finished CalcJobNode entries. The script should print out each node's UUID and exit status. Wrap the code in a function called fetch_finished_calculations() and ensure it can be executed independently.",
+"input": "AiiDA QueryBuilder script to retrieve finished CalcJobNode entries with UUIDs and exit statuses.",
+"output": "from aiida.orm import QueryBuilder, CalcJobNode\n\ndef fetch_finished_calculations():\n qb = QueryBuilder()\n qb.append(CalcJobNode, project=["uuid", "exit_status"], filters={"attributes.process_state": "Finished"})\n \n for uuid, exit_status in qb.all():\n print(f"Calculation {uuid} finished with exit status {exit_status}")\n\n\nif name == "main":\n fetch_finished_calculations()"
+},
+{
+"instruction": "Construct a standalone Python script for AiiDA that exploits QueryBuilder to get all CalcJobNode nodes with a 'Finished' process state. The script should output the UUID and exit status for each node, encapsulated in a function called fetch_finished_calculations().",
+"input": "AiiDA standalone script to get finished CalcJobNode nodes with UUID and exit status.",
+"output": "from aiida.orm import QueryBuilder, CalcJobNode\n\ndef fetch_finished_calculations():\n qb = QueryBuilder()\n qb.append(CalcJobNode, project=["uuid", "exit_status"], filters={"attributes.process_state": "Finished"})\n \n for uuid, exit_status in qb.all():\n print(f"Calculation {uuid} finished with exit status {exit_status}")\n\n\nif name == "main":\n fetch_finished_calculations()"
+},
+{
+"instruction": "Design an AiiDA Python script that utilizes QueryBuilder to extract all CalcJobNode objects with process state 'Finished'. The function fetch_finished_calculations() should wrap the logic to print each node's UUID and exit status, and the script should run as a standalone program.",
+"input": "AiiDA script using QueryBuilder to fetch finished CalcJobNode nodes, displaying their UUIDs and exit statuses.",
+"output": "from aiida.orm import QueryBuilder, CalcJobNode\n\ndef fetch_finished_calculations():\n qb = QueryBuilder()\n qb.append(CalcJobNode, project=["uuid", "exit_status"], filters={"attributes.process_state": "Finished"})\n \n for uuid, exit_status in qb.all():\n print(f"Calculation {uuid} finished with exit status {exit_status}")\n\n\nif name == "main":\n fetch_finished_calculations()"
+},
+{
+"instruction": "Implement a Python script for AiiDA that uses QueryBuilder to query CalcJobNode entries where the process state is 'Finished'. Organize the code within a function named fetch_finished_calculations() and print each calculation's UUID and exit status.",
+"input": "AiiDA Python script to query finished CalcJobNode nodes with their UUIDs and exit statuses.",
+"output": "from aiida.orm import QueryBuilder, CalcJobNode\n\ndef fetch_finished_calculations():\n qb = QueryBuilder()\n qb.append(CalcJobNode, project=["uuid", "exit_status"], filters={"attributes.process_state": "Finished"})\n \n for uuid, exit_status in qb.all():\n print(f"Calculation {uuid} finished with exit status {exit_status}")\n\n\nif name == "main":\n fetch_finished_calculations()"
+},
+{
+"instruction": "Develop an AiiDA Python script using QueryBuilder to search for CalcJobNode nodes with a finished process state. The script must display the UUID and exit status of each node, and the main logic should reside in a function named fetch_finished_calculations(), making it executable as a standalone module.",
+"input": "AiiDA script to fetch finished CalcJobNode nodes with UUID and exit status using QueryBuilder.",
+"output": "from aiida.orm import QueryBuilder, CalcJobNode\n\ndef fetch_finished_calculations():\n qb = QueryBuilder()\n qb.append(CalcJobNode, project=["uuid", "exit_status"], filters={"attributes.process_state": "Finished"})\n \n for uuid, exit_status in qb.all():\n print(f"Calculation {uuid} finished with exit status {exit_status}")\n\n\nif name == "main":\n fetch_finished_calculations()"
+},
+{
+"instruction": "Create a Python script for AiiDA that utilizes QueryBuilder to select all CalcJobNode entries that have finished processing. Wrap the logic in a function named fetch_finished_calculations() that prints out the UUID and exit status of each node, ensuring standalone execution.",
+"input": "Standalone AiiDA script to retrieve finished CalcJobNode nodes along with UUIDs and exit statuses.",
+"output": "from aiida.orm import QueryBuilder, CalcJobNode\n\ndef fetch_finished_calculations():\n qb = QueryBuilder()\n qb.append(CalcJobNode, project=["uuid", "exit_status"], filters={"attributes.process_state": "Finished"})\n \n for uuid, exit_status in qb.all():\n print(f"Calculation {uuid} finished with exit status {exit_status}")\n\n\nif name == "main":\n fetch_finished_calculations()"
+},
+{
+"instruction": "Produce an AiiDA script in Python that leverages QueryBuilder to find CalcJobNode nodes with a 'Finished' status. The script should encapsulate the functionality in a function called fetch_finished_calculations() which prints each node's UUID and exit status, and be runnable independently.",
+"input": "AiiDA Python script to extract finished CalcJobNode nodes using QueryBuilder, printing UUIDs and exit statuses.",
+"output": "from aiida.orm import QueryBuilder, CalcJobNode\n\ndef fetch_finished_calculations():\n qb = QueryBuilder()\n qb.append(CalcJobNode, project=["uuid", "exit_status"], filters={"attributes.process_state": "Finished"})\n \n for uuid, exit_status in qb.all():\n print(f"Calculation {uuid} finished with exit status {exit_status}")\n\n\nif name == "main":\n fetch_finished_calculations()"
+},
+{
+"instruction": "Write an AiiDA script using Python’s QueryBuilder to retrieve CalcJobNode entries with the process state 'Finished'. Ensure the script prints the UUID and exit status of each node from within a function called fetch_finished_calculations(), and is executable on its own.",
+"input": "Script to retrieve finished CalcJobNode nodes with UUID and exit status using QueryBuilder in AiiDA.",
+"output": "from aiida.orm import QueryBuilder, CalcJobNode\n\ndef fetch_finished_calculations():\n qb = QueryBuilder()\n qb.append(CalcJobNode, project=["uuid", "exit_status"], filters={"attributes.process_state": "Finished"})\n \n for uuid, exit_status in qb.all():\n print(f"Calculation {uuid} finished with exit status {exit_status}")\n\n\nif name == "main":\n fetch_finished_calculations()"
+},
+{
+"instruction": "Generate a standalone AiiDA Python script that employs QueryBuilder to collect CalcJobNode nodes with a 'Finished' process state. The script should print out each node’s UUID and exit status within a function named fetch_finished_calculations().",
+"input": "Standalone script to fetch finished CalcJobNode entries using QueryBuilder, including UUID and exit status.",
+"output": "from aiida.orm import QueryBuilder, CalcJobNode\n\ndef fetch_finished_calculations():\n qb = QueryBuilder()\n qb.append(CalcJobNode, project=["uuid", "exit_status"], filters={"attributes.process_state": "Finished"})\n \n for uuid, exit_status in qb.all():\n print(f"Calculation {uuid} finished with exit status {exit_status}")\n\n\nif name == "main":\n fetch_finished_calculations()"
+},
+{
+"instruction": "Create an executable Python script for AiiDA that uses QueryBuilder to fetch CalcJobNode entries with the process state set to 'Finished'. The code should reside in a function named fetch_finished_calculations() and print the UUID and exit status of each node.",
+"input": "AiiDA script to fetch finished CalcJobNode nodes with QueryBuilder, outputting UUID and exit status.",
+"output": "from aiida.orm import QueryBuilder, CalcJobNode\n\ndef fetch_finished_calculations():\n qb = QueryBuilder()\n qb.append(CalcJobNode, project=["uuid", "exit_status"], filters={"attributes.process_state": "Finished"})\n \n for uuid, exit_status in qb.all():\n print(f"Calculation {uuid} finished with exit status {exit_status}")\n\n\nif name == "main":\n fetch_finished_calculations()"
+},
+{
+"instruction": "Develop a Python script for AiiDA that deploys QueryBuilder to filter CalcJobNode objects with a 'Finished' process state. The script should include a function fetch_finished_calculations() that prints each node’s UUID and exit status, and run as a standalone program.",
+"input": "AiiDA QueryBuilder script to filter finished CalcJobNode nodes and print their UUIDs and exit statuses.",
+"output": "from aiida.orm import QueryBuilder, CalcJobNode\n\ndef fetch_finished_calculations():\n qb = QueryBuilder()\n qb.append(CalcJobNode, project=["uuid", "exit_status"], filters={"attributes.process_state": "Finished"})\n \n for uuid, exit_status in qb.all():\n print(f"Calculation {uuid} finished with exit status {exit_status}")\n\n\nif name == "main":\n fetch_finished_calculations()"
+},
+{
+"instruction": "Craft an AiiDA Python script with QueryBuilder that identifies all CalcJobNode entries having a process state of 'Finished'. Enclose the logic in a function called fetch_finished_calculations() which prints each node's UUID and exit status, ensuring the script runs independently.",
+"input": "AiiDA script using QueryBuilder to identify finished CalcJobNode entries with UUIDs and exit statuses.",
+"output": "from aiida.orm import QueryBuilder, CalcJobNode\n\ndef fetch_finished_calculations():\n qb = QueryBuilder()\n qb.append(CalcJobNode, project=["uuid", "exit_status"], filters={"attributes.process_state": "Finished"})\n \n for uuid, exit_status in qb.all():\n print(f"Calculation {uuid} finished with exit status {exit_status}")\n\n\nif name == "main":\n fetch_finished_calculations()"
+},
+{
+"instruction": "Write a complete AiiDA Python script leveraging QueryBuilder to look for CalcJobNode nodes where the process state equals 'Finished'. The functionality should be enclosed in a function called fetch_finished_calculations() that prints each node's UUID and exit status, and the script must be executable on its own.",
+"input": "Script to find finished CalcJobNode nodes using QueryBuilder in AiiDA, printing UUID and exit status.",
+"output": "from aiida.orm import QueryBuilder, CalcJobNode\n\ndef fetch_finished_calculations():\n qb = QueryBuilder()\n qb.append(CalcJobNode, project=["uuid", "exit_status"], filters={"attributes.process_state": "Finished"})\n \n for uuid, exit_status in qb.all():\n print(f"Calculation {uuid} finished with exit status {exit_status}")\n\n\nif name == "main":\n fetch_finished_calculations()"
+},
+{
+"instruction": "Assemble a standalone AiiDA Python script that uses QueryBuilder to locate CalcJobNode entries with a finished process state ('Finished'). Encapsulate the code in a function named fetch_finished_calculations() that prints each node's UUID and its exit status.",
+"input": "AiiDA standalone script to locate finished CalcJobNode entries with QueryBuilder and print UUID and exit status.",
+"output": "from aiida.orm import QueryBuilder, CalcJobNode\n\ndef fetch_finished_calculations():\n qb = QueryBuilder()\n qb.append(CalcJobNode, project=["uuid", "exit_status"], filters={"attributes.process_state": "Finished"})\n \n for uuid, exit_status in qb.all():\n print(f"Calculation {uuid} finished with exit status {exit_status}")\n\n\nif name == "main":\n fetch_finished_calculations()"
+},
+{
+"instruction": "Implement an AiiDA Python script that uses QueryBuilder to extract CalcJobNode nodes with a process state 'Finished'. Wrap the script logic in a function called fetch_finished_calculations() that prints the UUIDs and exit statuses, and ensure the code is directly executable.",
+"input": "AiiDA script to extract finished CalcJobNode nodes with their UUIDs and exit statuses via QueryBuilder.",
+"output": "from aiida.orm import QueryBuilder, CalcJobNode\n\ndef fetch_finished_calculations():\n qb = QueryBuilder()\n qb.append(CalcJobNode, project=["uuid", "exit_status"], filters={"attributes.process_state": "Finished"})\n \n for uuid, exit_status in qb.all():\n print(f"Calculation {uuid} finished with exit status {exit_status}")\n\n\nif name == "main":\n fetch_finished_calculations()"
+},
+{
+"instruction": "Develop a standalone Python script for AiiDA using QueryBuilder that retrieves all CalcJobNode entries with the process state 'Finished'. Ensure that the script prints the UUID and exit status for each fetched node through a function named fetch_finished_calculations().",
+"input": "Standalone AiiDA script to retrieve finished CalcJobNode nodes with UUID and exit status using QueryBuilder.",
+"output": "from aiida.orm import QueryBuilder, CalcJobNode\n\ndef fetch_finished_calculations():\n qb = QueryBuilder()\n qb.append(CalcJobNode, project=["uuid", "exit_status"], filters={"attributes.process_state": "Finished"})\n \n for uuid, exit_status in qb.all():\n print(f"Calculation {uuid} finished with exit status {exit_status}")\n\n\nif name == "main":\n fetch_finished_calculations()"
+},
+{
+"instruction": "Craft a Python script for AiiDA that employs QueryBuilder to obtain CalcJobNode nodes in the 'Finished' process state. The script should print each node's UUID and exit status within a function called fetch_finished_calculations() and run as an independent script.",
+"input": "AiiDA script leveraging QueryBuilder to get finished CalcJobNode entries and display their UUIDs and exit statuses.",
+"output": "from aiida.orm import QueryBuilder, CalcJobNode\n\ndef fetch_finished_calculations():\n qb = QueryBuilder()\n qb.append(CalcJobNode, project=["uuid", "exit_status"], filters={"attributes.process_state": "Finished"})\n \n for uuid, exit_status in qb.all():\n print(f"Calculation {uuid} finished with exit status {exit_status}")\n\n\nif name == "main":\n fetch_finished_calculations()"
+},
+{
+"instruction": "Write a Python script for AiiDA using QueryBuilder to obtain all CalcJobNode entries that are marked as finished. Structure the code in a function called fetch_finished_calculations() which prints each node’s UUID and exit status, ensuring the script is executable as a standalone module.",
+"input": "AiiDA script that uses QueryBuilder to obtain finished CalcJobNode nodes and print their UUIDs and exit statuses.",
+"output": "from aiida.orm import QueryBuilder, CalcJobNode\n\ndef fetch_finished_calculations():\n qb = QueryBuilder()\n qb.append(CalcJobNode, project=["uuid", "exit_status"], filters={"attributes.process_state": "Finished"})\n \n for uuid, exit_status in qb.all():\n print(f"Calculation {uuid} finished with exit status {exit_status}")\n\n\nif name == "main":\n fetch_finished_calculations()"
+},
+{
+"instruction": "Construct an AiiDA Python script that harnesses QueryBuilder to fetch CalcJobNode nodes whose process state is 'Finished'. Enclose the functionality in a function named fetch_finished_calculations() which prints each node's UUID and exit status, and ensure the script can be run directly.",
+"input": "AiiDA script utilizing QueryBuilder to fetch finished CalcJobNode nodes, printing UUID and exit status.",
+"output": "from aiida.orm import QueryBuilder, CalcJobNode\n\ndef fetch_finished_calculations():\n qb = QueryBuilder()\n qb.append(CalcJobNode, project=["uuid", "exit_status"], filters={"attributes.process_state": "Finished"})\n \n for uuid, exit_status in qb.all():\n print(f"Calculation {uuid} finished with exit status {exit_status}")\n\n\nif name == "main":\n fetch_finished_calculations()"
+},
+{
+"instruction": "Develop an AiiDA Python script using QueryBuilder to identify all CalcJobNode entries with their process state set as 'Finished'. The script should encapsulate its logic within a function called fetch_finished_calculations() that prints each node's UUID and exit status, and be executable on its own.",
+"input": "Script for AiiDA using QueryBuilder to identify finished CalcJobNode nodes with UUID and exit status.",
+"output": "from aiida.orm import QueryBuilder, CalcJobNode\n\ndef fetch_finished_calculations():\n qb = QueryBuilder()\n qb.append(CalcJobNode, project=["uuid", "exit_status"], filters={"attributes.process_state": "Finished"})\n \n for uuid, exit_status in qb.all():\n print(f"Calculation {uuid} finished with exit status {exit_status}")\n\n\nif name == "main":\n fetch_finished_calculations()"
+},
+{
+"instruction": "Design a complete AiiDA Python script with QueryBuilder to retrieve CalcJobNode entries where the process state is 'Finished'. Ensure the script prints each node's UUID and exit status via a function named fetch_finished_calculations(), and is ready to be executed as a standalone script.",
+"input": "AiiDA script to retrieve finished CalcJobNode entries using QueryBuilder, outputting UUID and exit status.",
+"output": "from aiida.orm import QueryBuilder, CalcJobNode\n\ndef fetch_finished_calculations():\n qb = QueryBuilder()\n qb.append(CalcJobNode, project=["uuid", "exit_status"], filters={"attributes.process_state": "Finished"})\n \n for uuid, exit_status in qb.all():\n print(f"Calculation {uuid} finished with exit status {exit_status}")\n\n\nif name == "main":\n fetch_finished_calculations()"
+},
+{
+"instruction": "Implement a standalone script for AiiDA in Python that applies QueryBuilder to fetch all CalcJobNode objects with the process state 'Finished'. Include a function called fetch_finished_calculations() that prints out each node's UUID along with its exit status.",
+"input": "Standalone AiiDA Python script to fetch finished CalcJobNode nodes with UUID and exit status using QueryBuilder.",
+"output": "from aiida.orm import QueryBuilder, CalcJobNode\n\ndef fetch_finished_calculations():\n qb = QueryBuilder()\n qb.append(CalcJobNode, project=["uuid", "exit_status"], filters={"attributes.process_state": "Finished"})\n \n for uuid, exit_status in qb.all():\n print(f"Calculation {uuid} finished with exit status {exit_status}")\n\n\nif name == "main":\n fetch_finished_calculations()"
+},
+{
+"instruction": "Craft an AiiDA Python script that employs QueryBuilder to filter out CalcJobNode entries with a 'Finished' process state. The code should be wrapped in a function named fetch_finished_calculations() which prints the UUID and exit status for every node, and the script should be executable by itself.",
+"input": "AiiDA script using QueryBuilder to filter finished CalcJobNode nodes, printing UUID and exit status.",
+"output": "from aiida.orm import QueryBuilder, CalcJobNode\n\ndef fetch_finished_calculations():\n qb = QueryBuilder()\n qb.append(CalcJobNode, project=["uuid", "exit_status"], filters={"attributes.process_state": "Finished"})\n \n for uuid, exit_status in qb.all():\n print(f"Calculation {uuid} finished with exit status {exit_status}")\n\n\nif name == "main":\n fetch_finished_calculations()"
+}
+]
